@@ -46,6 +46,10 @@ body {
  transform: translate3d(-50%, -50%, 0);
 }
 
+.order-number{
+  font-size: 500%;
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
