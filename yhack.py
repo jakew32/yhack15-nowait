@@ -57,16 +57,12 @@ def checkout():
         }
     })
 
-    if result.is_success:
-        number = random.randrange(1, 999)
-        return render_template("checkout.html", number=number)
-
-    else:
-        return "error"
+    number = random.randrange(1, 999)
+    return render_template("checkout.html", number=number)
 
 
 
 
 
 if __name__ == '__main__':
-    app.run('0.0.0.0', debug=True)
+    app.run('0.0.0.0')

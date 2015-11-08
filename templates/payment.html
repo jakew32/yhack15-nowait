@@ -23,13 +23,42 @@
 
   <body>
 
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+  <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand"></h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">Partner</a><li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Login</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+    <div class="row">
+  <h1>Order</h1>
+  <p>You're ordering the {{ item }} for a total of {{ amount }}.</p>
+        </div>
+
+            <div class="row">
   	<div class="form" align="center">
   		<form id="checkout" method="post" action="/checkout/">
   			<div id="payment-form"></div>
             <input type="hidden" value="{{ amount }}" name="amount"/>
-  			<input type="submit" class="btn btn-primary btn-lg"/>
+  			<input type="submit" class="btn btn-primary btn-lg" value="Submit Payment"/>
 		</form>
   	</div>
+                </div>
+            </div>
+          </div>
+      </div>
   	
 
 
