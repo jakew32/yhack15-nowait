@@ -9,6 +9,10 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello World!'
 
+@app.route('/nearby')
+def get_nearby():
+    return render_template("nearby.html")
+
 @app.route('/order/')
 def place_order():
     clienttoken = braintree.ClientToken.generate()
