@@ -1,4 +1,4 @@
-from flask import Flask, request, render_template
+from flask import Flask, request, render_template, send_from_directory
 import braintree, random
 import yhackconfig
 
@@ -12,6 +12,18 @@ def hello_world():
 @app.route('/nearby')
 def get_nearby():
     return render_template("nearby.html")
+
+@app.route('/js/<path:path>')
+def send_js(path):
+    return send_from_directory('js', path)
+
+@app.route('/css/<path:path>')
+def send_css(path):
+    return send_from_directory('css', path)
+
+@app.route('/img/<path:path>')
+def send_img(path):
+    return send_from_directory('img', path)
 
 @app.route('/order/')
 def place_order():
@@ -27,11 +39,11 @@ def get_truck_menu3():
     return render_template("3.html")
 
 @app.route('/trucks/5/')
-def get_truck_menu3():
+def get_truck_menu5():
     return render_template("5.html")
 
 @app.route('/trucks/6/')
-def get_truck_menu3():
+def get_truck_menu6():
     return render_template("6.html")
 
 @app.route('/checkout/', methods=['POST'])
