@@ -9,7 +9,7 @@ app = Flask(__name__)
 def hello_world():
     return render_template("index.html")
 
-@app.route('/nearby')
+@app.route('/nearby/')
 def get_nearby():
     return render_template("nearby.html")
 
